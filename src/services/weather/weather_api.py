@@ -1,15 +1,10 @@
 import aiohttp
 
 from src.services.weather.models.get_weather_response import GetWeatherResponse
+from src.utils.secrets import read_secrets
 
-SPB_LATITUDE = "59.93"
-SPB_LONGITUDE = "30.30"
-TIMEZONE = "Europe%2FMoscow"
-
-URL = f"https://api.open-meteo.com/v1/forecast?" \
-      f"latitude={SPB_LATITUDE}&" \
-      f"longitude={SPB_LONGITUDE}&" \
-      f"current_weather=true&timezone={TIMEZONE}"
+secrets = read_secrets()
+URL = secrets["WEATHER_API_URL"]
 
 
 async def get_weather() -> GetWeatherResponse:
