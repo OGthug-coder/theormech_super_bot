@@ -7,6 +7,8 @@ Place such appsettings.json file in src directory
 ```json
 {
     "TELEGRAM_BOT_TOKEN": "your telegram bot token",
-    "FRONTEND_URL": "frontend url"
+    "FRONTEND_URL": "frontend url",
+    "WEATHER_API_URL": "weather api url"
+
 }
 ```
